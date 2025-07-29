@@ -1,6 +1,6 @@
 import torch
 
-from network import Network
+from src.network import Network
 
 class ModelInitializer:
     def __init__(self, **kwargs):
@@ -10,3 +10,6 @@ class ModelInitializer:
 
         self.optimizer = torch.optim.Adam(self.network.parameters(), lr=1e-3)
         self.loss_fn = torch.nn.CrossEntropyLoss()
+
+        self.classes = ('plane', 'car', 'bird', 'cat',
+            'deer', 'dog', 'frog', 'horse', 'ship', 'truck')

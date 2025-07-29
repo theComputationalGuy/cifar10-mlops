@@ -1,5 +1,4 @@
 import torch
-import numpy as np
 from torchvision import transforms
 
 from src.model_initializer import ModelInitializer
